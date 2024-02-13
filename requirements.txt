@@ -1,0 +1,8 @@
+fastapi
+pydantic
+uvicorn
+redis
+debugpy
+python-multipart
+sqlalchemy
+jinja2
