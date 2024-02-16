@@ -1,6 +1,7 @@
 import re
 import logging
 
+
 person = "John"
 age = 23
 print(f"Hi, my name is {person} and I am {age} years old.")
@@ -10,20 +11,6 @@ print(message)
 
 message = "\n%s is %d years old"
 print(message % (person, age))
-
-
-def is_valid_uk_postcode(postcode):
-    pattern = r"^([A-Z][A-HJ-Y]?\d[A-Z\d]? ?\d[A-Z]{2}|GIR ?0A{2})$"
-    return bool(re.match(pattern, postcode))
-
-
-postcodes = {"SW1W 0NY", "PO16 7GZ", "GU16 7HF", "L1 8JQ2"}
-
-for postcode in postcodes:
-    if is_valid_uk_postcode(postcode):
-        print(f"{postcode} is a valid UK postcode.")
-    else:
-        print(f"{postcode} is not a valid UK postcode.")
 
 
 def is_this_a_valid_email(email):
@@ -119,7 +106,7 @@ def print_vs_logging():
     logging.critical("This is a logging critical error.")
 
 
-def main():
+def bit_of_everything():
     level = logging.DEBUG
     fmt = '%(asctime)s - %(levelname)s - %(message)s'
     logging.basicConfig(level=level, format=fmt)
@@ -131,5 +118,6 @@ def main():
     is_palindrome
 
 
-if __name__ == "__main__":
-    main()
+# for non library code best practice is to use the following
+# if __name__ == "__main__":
+#     main()
